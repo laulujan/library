@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header>BooksBooks</header>
-        <button>Add Book</button>
+        <button id="add-book">Add Book</button>
         <div class="book-form">
             <form>
                 <label for="title">Title</label>
@@ -19,10 +19,11 @@
                 <label for="pages">Pages</label>
                 <input type="number" id="pages"  name="pages "required>
                 <p>Status</p>
-                <input type="radio" value="yes" id="yes" name="status">
+                <input type="radio" value="yes" id="yes" name="status" checked="checked">
                 <label for="yes">Read</label>
-                <input type="radio"  value="no" id="no" name="status">
+                <input type="radio"  value="no" id="no" name="status" >
                 <label for="no">Not Read</label> 
+                <button type="button" id="add">Add</button>
             </form>
         </div>
     </div>
