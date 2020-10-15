@@ -9,20 +9,31 @@ function Book(id, title, author, pages, read) {
   this.read = read;
 }
 
-let faust = new Book(1, "Faust", "Goethe", 158, true);
-myLibrary.push(faust);
 
-//function to remove class hidden from book form
-function showForm(){
-   return document.getElementsByClassName('book-form')[0].classList.remove('hidden');
-}
-//function to add class hidden to book form
-function hideForm(){
-  return  document.getElementsByClassName('book-form')[0].classList.add('hidden');
-}
+//function to load info from local storage
+window.addEventListener('load', () => {
+    myLibrary = JSON.parse(localStorage.getItem('library')) || [];
+    myLibrary.forEach(book => {
+        displayCards(book);
+    });
+})
+
 
 let addBook = document.getElementById('add-book');
 addBook.addEventListener('click', showForm)
+//function to remove class hidden from book form
+function showForm(){
+    document.getElementsByClassName('book-form')[0].classList.remove('hidden');
+    addBook.classList.add('hidden');
+
+}
+//function to add class hidden to book form
+function hideForm(){
+    document.getElementsByClassName('book-form')[0].classList.add('hidden');
+    addBook.classList.remove('hidden');
+}
+
+
 
 function getRadioValue() {
   const radios = document.getElementsByName("status");
@@ -50,6 +61,8 @@ function addBookToLibrary(id, title, author, pages, read) {
   myLibrary.push(newBook);
   hideForm();
   displayCards(newBook);
+  localStorage.setItem('library', JSON.stringify(myLibrary));
+
 }
 
 //books is the area where the cards are going to be placed
@@ -112,7 +125,9 @@ function changeStatus (statusInput){
 //this function removes the book's card and removes the book from array
 function removeCard(){
     document.getElementById(newBook.id).remove();
+    let index = myLibrary.findIndex(element => element.id == newBook.id);
     myLibrary.splice(newBook.id, 1);
+    localStorage.setItem('library', JSON.stringify(myLibrary));
 }
 
 }
