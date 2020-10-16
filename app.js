@@ -56,9 +56,11 @@ function addBookToLibrary(id, title, author, pages, read) {
   if(title == "" || author == "" || pages == ""){
     alert ('Please enter valid info')
 }
-
+  
   let newBook = new Book(id, title, author, pages, read);
   myLibrary.push(newBook);
+  let form = document.getElementsByName('bookForm')[0];
+  form.reset();
   hideForm();
   displayCards(newBook);
   localStorage.setItem('library', JSON.stringify(myLibrary));
