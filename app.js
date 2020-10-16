@@ -76,6 +76,9 @@ function createElem(elem){
 }
 //create book card and display
 function displayCards(newBook) {
+  if(newBook.title == "" || newBook.author == "" || newBook.pages == ""){
+    return
+  }
   let card = createElem("div");
   card.classList.add('card')
   card.setAttribute("id", newBook.id)

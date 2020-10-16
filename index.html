@@ -12,7 +12,7 @@
             <h1>BooksBooks</h1>
         </header>
         <div class="img-container">
-            <img alt="book gif" src="https://media3.giphy.com/media/3ov9kbWTS6WVs4vao0/giphy.gif" id="img">
+            <img alt="book gif" src="https://webstockreview.net/images/clipart-book-gif-animation-4.gif" id="img">
             <button id="add-book">Add Book</button>
         </div>
         <div class="book-form hidden">
@@ -23,12 +23,14 @@
                 <input type="text"  id="author" name="author" required>
                 <label for="pages">Pages</label>
                 <input type="number" id="pages"  name="pages "required>
-                <p>Status</p>
+                <div>
+                   <p>Status</p>
                 <input type="radio" value="yes" id="yes" name="status" checked="checked">
                 <label for="yes">Read</label>
                 <input type="radio"  value="no" id="no" name="status" >
                 <label for="no">Not Read</label> 
-                <button type="button" id="add">Add</button>
+                </div>
+                <button type="button" id="add">Add</button> 
             </form>
         </div>
         <div class="books-ctn" id="booksCtn"></div>

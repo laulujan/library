@@ -1,3 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap');
+
+body{
+  background-color: #DFECFD;
+  font-family: 'Open Sans', sans-serif;
+}
+/*title*/
+header{
+  text-align: center;
+  font-family:  'Pacifico', cursive;
+  margin: 10px;
+}
+/*img container*/
+.img-container{
+  display: grid;
+  margin: auto;
+  max-width: 400px;
+}
+#img{
+  margin: auto;
+  max-width: 300px;
+}
+
+button{
+  margin: auto;
+  width: 200px;
+  border-radius: 25px;
+  border: solid #C191E5;
+  background-color: #C191E5;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+button:hover{
+  transform: scale(1.2);
+}
+button:focus{
+  outline: none;
+  border: solid #b76eeb 2px ;
+  margin: 10px;
+}
+
+/*form */
+.book-form{
+  max-width: 500px;
+  margin: auto;
+}
+form{
+  display: grid;
+  background-color: #FAFCFE;
+  border-radius: 10px;
+  padding: 10px;
+}
+form input{
+  border-radius: 20px;
+  border: none;
+  background-color: #DFECFD;
+}
+form button{
+  width: 70px;
+}
+form input:focus {
+  border: solid #9EC5FA 2px;
+  outline: none;
+
+}
+
+#pages {
+  max-width: 100px;
+}
+
 
 .hidden{
     display: none;
@@ -7,8 +77,8 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 43px;
+    height: 18px;
   }
   
   /* Hide default HTML checkbox */
@@ -34,21 +104,21 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 16px;
+    width: 16px;
+    left: 1px;
+    bottom: 1px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #FAD39E;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #FAD39E;
   }
   
   input:checked + .slider:before {
@@ -64,4 +134,22 @@
   
   .slider.round:before {
     border-radius: 50%;
+  }
+  /* card */
+
+  .books-ctn{
+    margin: 20px;
+    display: flex;
+    place-content: space-evenly;
+  }
+  .card {
+    width: 250px;
+    text-align: center;
+    background-color: #9EC5FA;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+  .card button {
+    width: fit-content;
+    margin: 10px;
   }
