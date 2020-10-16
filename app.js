@@ -44,6 +44,9 @@ function getRadioValue() {
   }
 }
 
+// close form
+document.getElementById('close').addEventListener('click', hideForm)
+
 // function to add onclick function to add button
 document.getElementById("add").addEventListener("click", addBookToLibrary);
 //get form info and create new book, then adds it to library
@@ -136,5 +139,4 @@ function removeCard(){
 }
 
 }
-
 

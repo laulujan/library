@@ -49,6 +49,13 @@ button:focus {
   max-width: 500px;
   margin: auto;
 }
+#close {
+  float: right;
+  text-align: end;
+}
+#close:hover{
+  color: #b76eeb;
+}
 form {
   display: grid;
   background-color: #fafcfe;
